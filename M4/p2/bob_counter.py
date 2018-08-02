@@ -1,5 +1,5 @@
 """string"""
-"""Assume s is a string of lower case characters."""
+#Assume s is a string of lower case characters.
 def main():
     str_ = input()
     coun_ = 0
