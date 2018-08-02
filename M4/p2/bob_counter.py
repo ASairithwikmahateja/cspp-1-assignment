@@ -3,8 +3,9 @@
 def main():
     str_ = input()
     coun_ = 0
-    if "bob" in str_:
-        coun_ = coun_+ 1
+    for i in len(str_):
+        if "bob" in str_:
+            coun_ = coun_+ 1
     print(coun_)  
 if __name__ == "__main__":
     main()
