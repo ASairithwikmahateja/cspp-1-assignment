@@ -1,5 +1,5 @@
 """string"""
-
+#Assume str is a string of lower case characters
 def main():
 	"""string"""
     str_ = input()
