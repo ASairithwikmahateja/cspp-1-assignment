@@ -3,7 +3,7 @@
 def main():
     str_ = input()
     coun_ = 0
-    while str_ is "bob":
+    if "bob" in str_:
         coun_ = coun_+ 1
     print(coun_)  
 if __name__ == "__main__":
