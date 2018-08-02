@@ -1,7 +1,6 @@
 """string"""
 #Assume str is a string of lower case characters
 def main():
-	"""string"""
     str_ = input()
     coun_ = 0
     for char in str_:
