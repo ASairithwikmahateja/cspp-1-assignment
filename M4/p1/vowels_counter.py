@@ -5,7 +5,7 @@
 #Number of vowels: 5
 
 def main():
-	s_= input("Enter the string")
+	s_= input()
 	k_= 0
 	for char in s_:
 		if char in ('a','e','i','o','u'):
