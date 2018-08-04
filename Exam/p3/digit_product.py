@@ -17,6 +17,6 @@ def main():
             int_input = int_input//10
         print(prod)
     else:
-    	print(0)
+        print(0)
 if __name__ == "__main__":
     main()
