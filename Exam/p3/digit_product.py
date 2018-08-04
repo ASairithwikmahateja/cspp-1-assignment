@@ -10,10 +10,13 @@ def main():
     '''
     int_input = int(input())
     prod = 1
-    while int_input > 1:
-        temp = int_input%10
-        prod = prod*temp
-        int_input = int_input//10
-    print(prod)
+    if int_input != 0:
+        while int_input > 0:
+            temp = int_input%10
+            prod = prod*temp
+            int_input = int_input//10
+        print(prod)
+    else:
+    	print(0)
 if __name__ == "__main__":
     main()
