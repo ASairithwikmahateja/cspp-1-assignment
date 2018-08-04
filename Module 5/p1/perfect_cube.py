@@ -9,7 +9,7 @@ def main():
     '''Program starts here'''
     cube = int(input())
     epsilon = 0.01
-    guess = 0.0
+    guess = 1
     increment = 0.001
     while abs(guess**3-cube) >= epsilon:
         guess += increment
