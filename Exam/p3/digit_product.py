@@ -13,7 +13,7 @@ def main():
     while int_input == 0:
     	print("0")
     	break
-    while int_input > 0:
+    while int_input > 1:
         temp = int_input%10
         prod = prod*temp
         int_input = int_input//10
