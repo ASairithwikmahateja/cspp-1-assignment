@@ -18,7 +18,7 @@ def main():
             int_input = int_input//10
         print(prod)
     elif int_input < 0:
-        while abs(int_input) > 0:
+        while int_input > 0:
             temp = int_input%10
             prod = prod*temp
             int_input = int_input//10
