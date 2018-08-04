@@ -11,7 +11,7 @@ def main():
     int_input = int(input())
     prod = 1
     while int_input == "0":
-    	print("0")
+        print("0")
     while int_input > 1:
         temp = int_input%10
         prod = prod*temp
