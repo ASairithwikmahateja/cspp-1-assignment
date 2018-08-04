@@ -11,6 +11,7 @@ def main():
     temp_ = ""
     for i, char in enumerate(str_input):
         if str_input[i] in "!@#$%^&*":
+            del str_input[i]
             temp_ += ""
     print(temp_)
 if __name__ == "__main__":
