@@ -10,8 +10,8 @@ def main():
     str_input = input()
     temp_ = ""
     for i in range(len(str_input)):
-    	if str_input[i] in "!@#$%^&*":
-    		temp_ += ""
+        if str_input[i] in "!@#$%^&*":
+            temp_ += ""
     print(temp_)
 if __name__ == "__main__":
     main()
