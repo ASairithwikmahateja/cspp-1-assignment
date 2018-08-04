@@ -10,6 +10,8 @@ def main():
     '''
     int_input = int(input())
     prod = 1
+    if int_input == 0:
+    	print("1")
     while int_input > 0:
         temp = int_input%10
         prod = prod*temp
