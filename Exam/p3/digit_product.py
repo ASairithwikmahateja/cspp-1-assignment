@@ -22,7 +22,7 @@ def main():
     		temp = int_input%10
     		prod = prod*temp
     		int_input = int_input//10
-    	prod1 = -1*prod
+    		prod1 = -1*prod
     	print(prod1)
     else:
         print(0)
