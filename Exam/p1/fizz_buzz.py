@@ -9,7 +9,7 @@ def main():
     Read number from the input, store it in variable num.
     '''
     num = int(input())
-    for i in range(num):
+    for i in range(1,num):
         if i%3 != 0 and i%5 != 0:
             print(i)
         else:
