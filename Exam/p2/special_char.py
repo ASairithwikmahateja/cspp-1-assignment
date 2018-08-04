@@ -9,10 +9,10 @@ def main():
     '''
     str_input = input()
     temp_ = ""
-    for i, char in enumerate(str_input):
-        if str_input[i] in "!@#$%^&*":
-            del str_input[i]
-            temp_ += ""
+    for char in enumerate(str_input):
+        if char in "!@#$%^&*":
+            del char
+            temp_ += char+""
     print(temp_)
 if __name__ == "__main__":
     main()
