@@ -12,9 +12,9 @@ def main():
     for char in str_input:
         if char in "!@#$%^&*":
             del char
-            temp_ +=""
+            temp_ +=" "
         else:
-        	temp_ +=char
+            temp_ +=char
     print(temp_)
 if __name__ == "__main__":
     main()
