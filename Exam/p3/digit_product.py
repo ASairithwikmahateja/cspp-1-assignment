@@ -17,10 +17,5 @@ def main():
     print(prod)
     if int_input == 0:
     	print(1)
-    while int_input < 0:
-    	temp = abs(int_input)%10
-        prod = prod*temp
-        int_input = abs(int_input)//10
-    print(prod)
 if __name__ == "__main__":
     main()
