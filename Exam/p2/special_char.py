@@ -9,7 +9,7 @@ def main():
     '''
     str_input = input()
     temp_ = ""
-    for i,item in (str_input):
+    for i,item in enumerate(str_input):
         if str_input[i] in "!@#$%^&*":
             temp_ += ""
     print(temp_)
