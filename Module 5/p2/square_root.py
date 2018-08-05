@@ -1,18 +1,15 @@
-'''Write a python program to find the square root of the given number'''
+'''This program evaluates the square root of a number.'''
 def main():
-    """Program starts here"""
-    sqr = int(input())
+    '''Main function.'''
+    num_1 = int(input())
     epsilon = 0.01
-    guess = 0.0
-    increment = 0.001
-    num_guesses = 0
-    while abs(guess**2-sqr) >= epsilon:
-        guess += increment
-        num_guesses += 1
-    print("num_guesses =", num_guesses)
-    if abs(guess**2-sqr) >= epsilon:
-        print("Failed on square root of", sqr)
+    step = 0.1
+    guess = 0
+    while abs(guess**2-num_1) >= epsilon:
+        guess += step
+    if abs(guess**2-num_1) >= epsilon:
+        print("Failed on square root of", num_1)
     else:
-        print(guess, "is close to square root of", sqr)
+        print(guess)
 if __name__ == "__main__":
     main()
