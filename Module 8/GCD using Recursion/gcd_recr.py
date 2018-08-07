@@ -1,4 +1,5 @@
-"""Write a Python function, gcdRecur(a, b), that takes in two numbers and returns the GCD(a,b) of given a and b."""
+"""Write a Python function, gcdRecur(a, b),
+that takes in two numbers and returns the GCD(a,b) of given a and b."""
 def gcdrecur(a, b):
     '''a, b: positive integers
     returns: a positive integer, the greatest common divisor of a & b.'''
