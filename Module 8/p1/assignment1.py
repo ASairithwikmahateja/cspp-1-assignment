@@ -3,7 +3,7 @@ def factorial(n_i):
     '''n is positive Integer
     returns: a positive integer, the factorial of n.'''
     if n_i == 1:
-        return (1)
+        return 1
     res = n_i*factorial(n_i-1)
     return res
 
