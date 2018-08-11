@@ -27,7 +27,8 @@ def delete_person(network, arg1):
     while arg1 in network:
         if network.keys(arg1) == network.keys(arg2):
             network.delete(arg2)
-        return network    
+        return network 
+   
 def main():
     '''
         handling testcase input and printing output
