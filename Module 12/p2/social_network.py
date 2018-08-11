@@ -26,7 +26,7 @@ def delete_person(network, arg1):
     '''
     while arg1 in network:
         if network.keys(arg1) == 0:
-            network.delete(arg2)
+            network.delete(arg1)
         return network
 def main():
     '''
