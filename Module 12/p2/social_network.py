@@ -18,7 +18,7 @@ def unfollow(network, arg1, arg2):
     
         
 def delete_person(network, arg1):
-    while i in network:
+    while arg1 in network:
         if network.keys(arg1) == network.keys(arg2):
             network.delete(arg2)
         return network
