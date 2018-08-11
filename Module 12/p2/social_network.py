@@ -5,25 +5,29 @@
 '''
 
 def follow(network, arg1, arg2):
+    '''
+    follow
+    '''
     while arg1 in network:
         if network.keys(arg1) == network.keys(arg2):
             network.append(arg2)
         return network
-    
 def unfollow(network, arg1, arg2):
+    '''
+    unfollow
+    '''
     while arg1 in network:
         if network.keys(arg1) == network.keys(arg2):
             network.remove(arg2)
         return network
-    
-        
 def delete_person(network, arg1):
+    '''
+    delete
+    '''
     while arg1 in network:
         if network.keys(arg1) == network.keys(arg2):
             network.delete(arg2)
-        return network
-     
-    
+        return network    
 def main():
     '''
         handling testcase input and printing output
