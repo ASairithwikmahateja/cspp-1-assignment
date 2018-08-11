@@ -11,7 +11,6 @@ def main():
     temp_ = ""
     for char in str_input:
         if char in "!@#$%^&*":
-            del char
             temp_ += " "
         else:
             temp_ += char
