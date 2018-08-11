@@ -6,20 +6,20 @@
 
 def follow(network, arg1, arg2):
     while arg1 in network:
-        if network.key(arg1) == network.key(arg2):
+        if network.keys(arg1) == network.keys(arg2):
             network.append(arg2)
         return network
     
 def unfollow(network, arg1, arg2):
     while arg1 in network:
-        if network.key(arg1) == network.key(arg2):
+        if network.keys(arg1) == network.keys(arg2):
             network.remove(arg2)
         return network
     
         
 def delete_person(network, arg1):
     while i in network:
-        if network.key(arg1) == network.key(arg2):
+        if network.keys(arg1) == network.keys(arg2):
             delete(arg2)
         return network
      
