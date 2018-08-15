@@ -17,13 +17,14 @@ def is_straight(hand):
     a_dict = {'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'T':10,'J':11,'Q':12,'K':13,'A':14}
     t_l = []
     for card in hand:
-       t_l.append(card[0])
-       t_l.sort()
+       t_l.append(a_dict[card[0]])
+    t_l.sort()
+
     for item in range(len(t_l)-1):
-        if (int(t_l[item])-int(t_l[item+1]) == -1):
-            return True
+        if (int(t_l[item])-int(t_l[item+1]) != -1):
+            return False
+        return True
     # if all(True if i is "A2345" else False for i,v in hand):
-    	
 
 def is_flush(hand):
     '''
@@ -59,8 +60,11 @@ def hand_rank(hand):
 
     # check for straight, flush and straight flush
     if hand is is_flush(hand) and is_straight(hand):
-        return 3
-    # best hand of these 3 would be a straight flush with the return value 3
+        return 4
+    # best hand of these 3 would be a straight flush with the return value 4
+    #if hand is is_four_of_a_kind(hand):
+     #   return 3
+    # the second best would be a four of a kind with the return value 3   
     if hand is is_flush(hand):
         return 2
     # the second best would be a flush with the return value 2
