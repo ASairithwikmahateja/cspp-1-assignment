@@ -75,7 +75,7 @@ def hand_rank(hand):
     # best hand of these 3 would be a straight flush with the return value 4
     if hand is is_four_of_a_kind(hand):
         return 3
-    # the second best would be a four of a kind with the return value 3   
+    # the second best would be a four of a kind with the return value 3
     if hand is is_flush(hand):
         return 2
     # the second best would be a flush with the return value 2
