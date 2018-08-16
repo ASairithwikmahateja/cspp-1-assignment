@@ -26,6 +26,18 @@ def is_straight(hand):
         return True
     # if all(True if i is "A2345" else False for i,v in hand):
 
+def is_four_of_a_kind(hand):
+    t_l = []
+    for card in hand:
+       t_l.append(card[0])
+    t_l.sort()
+        
+    for item in range(len(t_l)-1):
+        if (int(t_l[item])-int(t_l[item+1]) != -1):
+            return False
+        return True
+    
+
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
@@ -38,7 +50,7 @@ def is_flush(hand):
     suit_set = set()
     for card in hand:
         suit_set.add(card[1])
-    return(len(suit_set)==1)
+    return(len(suit_set) == 1)
 
 def hand_rank(hand):
     '''
@@ -62,8 +74,8 @@ def hand_rank(hand):
     if hand is is_flush(hand) and is_straight(hand):
         return 4
     # best hand of these 3 would be a straight flush with the return value 4
-    #if hand is is_four_of_a_kind(hand):
-     #   return 3
+    if hand is is_four_of_a_kind(hand):
+        return 3
     # the second best would be a four of a kind with the return value 3   
     if hand is is_flush(hand):
         return 2
