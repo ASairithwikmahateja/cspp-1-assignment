@@ -27,16 +27,16 @@ def is_straight(hand):
     # if all(True if i is "A2345" else False for i,v in hand):
 
 def is_four_of_a_kind(hand):
+    '''Four of a kind'''
     t_l = []
     for card in hand:
        t_l.append(card[0])
     t_l.sort()
         
     for item in range(len(t_l)-1):
-        if (int(t_l[item])-int(t_l[item+1]) != -1):
+        if ((int(t_l[item])-int(t_l[item+1])) != -1):
             return False
         return True
-    
 
 def is_flush(hand):
     '''
@@ -83,8 +83,7 @@ def hand_rank(hand):
     if hand is is_straight(hand):
         return 1
     # third would be a straight with the return value 1
-    else:
-        return 0
+    return 0
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
 
