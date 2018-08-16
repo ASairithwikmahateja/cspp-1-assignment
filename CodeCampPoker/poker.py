@@ -22,7 +22,7 @@ def is_straight(hand):
     t_l.sort()
 
     for item in range(len(t_l)-1):
-        if (int(t_l[item])-int(t_l[item+1]) != -1):
+        if int(t_l[item])-int(t_l[item+1]) != -1:
             return False
         return True
     # if all(True if i is "A2345" else False for i,v in hand):
@@ -31,10 +31,9 @@ def is_four_of_a_kind(hand):
     '''Four of a kind'''
     t_l = []
     for card in hand:
-        t_l.append(card[0])
-    t_l.sort()     
+        t_l.append(card[0])     
     for item in range(len(t_l)-1):
-        if ((int(t_l[item])-int(t_l[item+1])) != -1):
+        if int(t_l[item])-int(t_l[item+1]) != -1:
             return False
         return True
 
@@ -50,7 +49,7 @@ def is_flush(hand):
     suit_set = set()
     for card in hand:
         suit_set.add(card[1])
-    return(len(suit_set) == 1)
+    return len(suit_set) == 1
 
 def hand_rank(hand):
     '''
