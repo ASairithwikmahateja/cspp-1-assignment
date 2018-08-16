@@ -42,10 +42,7 @@ def is_four_of_a_kind(hand):
             cnt += 1
         else:
             break
-    if cnt == 3 and len(suit_set) == 2:
-        return True
-    else:
-        return False
+    return cnt == 3 and len(suit_set) == 2
 
 def is_flush(hand):
     '''
