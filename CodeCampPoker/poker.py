@@ -39,9 +39,10 @@ def is_four_of_a_kind(hand):
     for item in range(len(t_l)-1):
         if int(t_l[item])-int(t_l[item+1]) == 0:
             cnt += 1
+            if cnt == 3:
+                return True
         else:
             cnt = 0
-    return cnt == 3
 
 def is_flush(hand):
     '''
