@@ -37,7 +37,7 @@ def is_four_of_a_kind(hand):
     for card in hand:
         t_l.append(a_dict[card[0]])
         suit_set.add(card[0])
-    for item in t_l:
+    for item in range(len(t_l)-1):
         if int(t_l[item]) == int(t_l[item+1]):
             cnt += 1
     if cnt == 3 and len(suit_set) == 2:
