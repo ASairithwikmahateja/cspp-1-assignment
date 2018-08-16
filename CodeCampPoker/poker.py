@@ -43,14 +43,6 @@ def is_four_of_a_kind(hand):
             cnt = 0
     return cnt == 3
 
-def is_three_of_a_kind(hand):
-    '''Three of a kind'''
-    suit_set = set()
-    for card in hand:
-        suit_set.add(card[0])
-        print(suit_set)
-    return len(suit_set) == 1
-
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
@@ -85,21 +77,17 @@ def hand_rank(hand):
 
     # check for straight, flush and straight flush
     if hand is is_flush(hand) and is_straight(hand):
-        return 8
+        return 4
     # best hand of these 3 would be a straight flush with the return value 4
     if hand is is_four_of_a_kind(hand):
-        return 6
+        return 3
     # the second best would be a four of a kind with the return value 3
-    if hand is is_fullhouse(hand):
-        return 5
     if hand is is_flush(hand):
-        return 4
+        return 2
     # the second best would be a flush with the return value 2
     if hand is is_straight(hand):
-        return 3
+        return 1
     # third would be a straight with the return value 1
-    if hand is is_three_of_a_kind(hand):
-        return 2
     return 0
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
