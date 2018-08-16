@@ -18,7 +18,7 @@ def is_straight(hand):
     '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
     t_l = []
     for card in hand:
-       t_l.append(a_dict[card[0]])
+        t_l.append(a_dict[card[0]])
     t_l.sort()
 
     for item in range(len(t_l)-1):
@@ -31,7 +31,7 @@ def is_four_of_a_kind(hand):
     '''Four of a kind'''
     t_l = []
     for card in hand:
-       t_l.append(card[0])
+        t_l.append(card[0])
     t_l.sort()     
     for item in range(len(t_l)-1):
         if ((int(t_l[item])-int(t_l[item+1])) != -1):
