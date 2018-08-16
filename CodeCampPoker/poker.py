@@ -3,7 +3,6 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -14,65 +13,32 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    a_dict = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
-    t_l = []
-    for card in hand:
-        t_l.append(a_dict[card[0]])
-    t_l.sort()
-
-    for item in range(len(t_l)-1):
-        if int(t_l[item])-int(t_l[item+1]) != -1:
-            return False
+    dict1={'A':14, 'K':13, 'Q':12, 'J':11,'T':10}
+    b=[]
+    for i in hand:
+        #print (i)
+        a=i[0]
+        #print(a)
+        if a in dict1.keys():
+            a=dict1[a]
+        #print (a)
+        a=int(a)
+        b.append(a)
+    #print(b)
+    b.sort()
+    #print (b)
+    d=max(b)
+    #print (d)
+    e=min(b)
+    #print (e)
+    f=d-e
+    #print (f)
+    g=len(b)
+    #print (g)
+    if f==4 and g==5:
         return True
-    # if all(True if i is "A2345" else False for i,v in hand):
-
-def is_four_of_a_kind(hand):
-    '''Four of a kind'''
-    a_dict = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
-    t_l = []
-    cnt = 0
-    for card in hand:
-        t_l.append(a_dict[card[0]])
-        t_l.sort()
-    for item in range(len(t_l)-1):
-        if int(t_l[item])-int(t_l[item+1]) == 0:
-            cnt += 1
-            if cnt == 3:
-                return True
-        else:
-            cnt = 0
-def is_three_of_a_kind(hand):
-    '''Three of a kind'''
-    a_dict = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
-    t_l = []
-    cnt = 0
-    for card in hand:
-        t_l.append(a_dict[card[0]])
-        t_l.sort()
-    for item in range(len(t_l)-1):
-        if int(t_l[item])-int(t_l[item+1]) == 0:
-            cnt += 1
-            if cnt == 2:
-                return True
-        else:
-            cnt = 0
-
-def is_two_pair(hand):
-    '''Three of a kind'''
-    a_dict = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
-    t_l = []
-    cnt = 0
-    for card in hand:
-        t_l.append(a_dict[card[0]])
-        t_l.sort()
-    for item in t_l:
-        if t_l.count(item) == 2:
-            cnt += 1
-            if cnt == 4:
-                return True
-        else:
-            cnt = 0
-
+    else:
+        return False
 
 def is_flush(hand):
     '''
@@ -83,10 +49,146 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    suit_set = set()
-    for card in hand:
-        suit_set.add(card[1])
-    return len(suit_set) == 1
+    dict1={'A':14, 'K':13, 'Q':12, 'J':11,'T':10}
+    b=[]
+    for i in hand:
+        #print (i)
+        a=i[1]
+        #print(a)
+        if a in dict1.keys():
+            a=dict1[a]
+        #print (a)
+        #a=int(a)
+        b.append(a)
+    #print(b)
+    c=set(b)
+    d=len(c)
+    #print (d)
+    if d==1:
+        return True
+    else:
+        return False
+
+def is_onepair(hand):
+    dict1={'A':14, 'K':13, 'Q':12, 'J':11,'T':10}
+    b=[]
+    for i in hand:
+        #print (i)
+        a=i[0]
+        #print(a)
+        if a in dict1.keys():
+            a=dict1[a]
+        #print (a)
+        a=int(a)
+        b.append(a)
+    #print(b)
+    c=0
+    for i in b:
+        if b.count(i)==2:
+            c=c+1
+    if c==2:
+        return True
+    else:
+        return False
+
+def is_fourkind(hand):
+    dict1={'A':14, 'K':13, 'Q':12, 'J':11,'T':10}
+    b=[]
+    for i in hand:
+        #print (i)
+        a=i[0]
+        #print(a)
+        if a in dict1.keys():
+            a=dict1[a]
+        #print (a)
+        a=int(a)
+        b.append(a)
+    #print(b)
+    x=0
+    c=0
+    for i in b:
+        if b.count(i)==4:
+            return True
+            #exit()
+    else:
+        return False
+
+def is_fullhouse(hand):
+    dict1={'A':14, 'K':13, 'Q':12, 'J':11,'T':10}
+    b=[]
+    for i in hand:
+        #print (i)
+        a=i[0]
+        #print(a)
+        if a in dict1.keys():
+            a=dict1[a]
+        #print (a)
+        a=int(a)
+        b.append(a)
+    #print(b)
+    c=0
+    d=0
+    for i in b:
+        if b.count(i)==3:
+            c=1
+        if b.count(i)==2:
+            d=1
+    if c==1 and d==1:
+        return True
+    else:
+        return False
+
+def is_threekind(hand):
+    dict1={'A':14, 'K':13, 'Q':12, 'J':11,'T':10}
+    b=[]
+    for i in hand:
+        #print (i)
+        a=i[0]
+        #print(a)
+        if a in dict1.keys():
+            a=dict1[a]
+        #print (a)
+        a=int(a)
+        b.append(a)
+    #print(b)
+    c=set(b)
+    e=len(c)
+    #print (e)
+
+    c=0
+    for i in b:
+        if b.count(i)==3:
+            c=c+1
+    if c==3 and e==3:
+        return True
+        #exit()
+    else:
+        return False
+
+def is_twopair(hand):
+    dict1={'A':14, 'K':13, 'Q':12, 'J':11,'T':10}
+    b=[]
+    for i in hand:
+        #print (i)
+        a=i[0]
+        #print(a)
+        if a in dict1.keys():
+            a=dict1[a]
+        #print (a)
+        a=int(a)
+        b.append(a)
+    #print(b)
+    c=set(b)
+    d=len(c)
+    #print (d)
+    c=0
+    for i in b:
+        if b.count(i)==2:
+            c += 1
+    if c == 4 and d==3:
+        return True
+    else:
+        return False
 
 def hand_rank(hand):
     '''
@@ -100,6 +202,23 @@ def hand_rank(hand):
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
     # Each card is coded as a 2 character string. Example Kind of Hearts is KH
+    if is_flush(hand) and is_straight(hand):
+        return 8
+    if is_fourkind(hand):
+        return 7
+    if is_fullhouse(hand):
+        return 6
+    if is_flush(hand):
+        return 5
+    if is_straight(hand):
+        return 4
+    if is_threekind(hand):
+        return 3
+    if is_twopair(hand):
+        return 2
+    if is_onepair(hand):
+        return 1
+    return 0
     # First character for face value 2,3,4,5,6,7,8,9,T,J,Q,K,A
     # Second character for the suit S (Spade), H (Heart), D (Diamond), C (Clubs)
     # What would be the logic to determine if a hand is a straight or flush?
@@ -107,21 +226,12 @@ def hand_rank(hand):
     # Instead break it down into two sub functions is_straight and is_flush
 
     # check for straight, flush and straight flush
-    if hand is is_flush(hand) and is_straight(hand):
-        return 4
-    # best hand of these 3 would be a straight flush with the return value 4
-    if hand is is_four_of_a_kind(hand):
-        return 3
-    # the second best would be a four of a kind with the return value 3
-    if hand is is_flush(hand):
-        return 2
+    # best hand of these 3 would be a straight flush with the return value 3
     # the second best would be a flush with the return value 2
-    if hand is is_straight(hand):
-        return 1
     # third would be a straight with the return value 1
-    return 0
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
+    
 
 def poker(hands):
     '''
