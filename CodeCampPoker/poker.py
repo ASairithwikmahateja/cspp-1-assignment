@@ -29,13 +29,21 @@ def is_straight(hand):
 
 def is_four_of_a_kind(hand):
     '''Four of a kind'''
+    a_dict = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8,
+             '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
     t_l = []
+    suit_set = set()
+    cnt = 0
     for card in hand:
-        t_l.append(card[0])     
-    for item in range(len(t_l)-1):
-        if int(t_l[item])-int(t_l[item+1]) != -1:
-            return False
+        t_l.append(a_dict[card[0]])
+        suit_set.add(card[0])
+    for item in t_l:
+        if int(t_l[item]) == int(t_l[item+1]):
+            cnt += 1
+    if cnt == 3 and len(suit_set) == 2:
         return True
+    else:
+        return False
 
 def is_flush(hand):
     '''
