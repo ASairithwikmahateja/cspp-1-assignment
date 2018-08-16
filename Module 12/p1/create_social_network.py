@@ -8,6 +8,7 @@ def create_social_network(data):
     '''
     redir = {}
     l_data = list(data.split('\n'))
+    print(l_data)
     for i in l_data:
         key_ = i.split(' ')[0]
         value_ = i.split(' ')[2::]
