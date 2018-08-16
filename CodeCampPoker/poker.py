@@ -66,7 +66,7 @@ def is_two_pair(hand):
         t_l.append(a_dict[card[0]])
         t_l.sort()
     for item in t_l:
-        if t_l.COUNT[item] == 2:
+        if t_l.count(item) == 2:
             cnt += 1
             if cnt == 4:
                 return True
