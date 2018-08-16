@@ -27,7 +27,7 @@ def is_straight(hand):
         return True
     # if all(True if i is "A2345" else False for i,v in hand):
 
-def is_three_of_a_kind(hand):
+def is_four_of_a_kind(hand):
     '''Four of a kind'''
     a_dict = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8,
              '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
@@ -41,7 +41,7 @@ def is_three_of_a_kind(hand):
         if int(t_l[item]) == int(t_l[item+1]):
             cnt += 1
         else:
-            cnt = 0
+            break
     if cnt == 3 and len(suit_set) == 2:
         return True
     else:
