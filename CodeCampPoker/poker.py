@@ -41,6 +41,22 @@ def is_four_of_a_kind(hand):
                 return True
         else:
             cnt = 0
+def is_three_of_a_kind(hand):
+    '''Four of a kind'''
+    a_dict = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
+    t_l = []
+    cnt = 0
+    for card in hand:
+        t_l.append(a_dict[card[0]])
+        t_l.sort()
+    for item in range(len(t_l)-1):
+        if int(t_l[item])-int(t_l[item+1]) == 0:
+            cnt += 1
+            if cnt == 2:
+                return True
+        else:
+            cnt = 0
+
 
 def is_flush(hand):
     '''
