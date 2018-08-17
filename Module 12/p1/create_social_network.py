@@ -50,7 +50,7 @@ def create_social_network(data):
         list_key_val = eachline(i)
         if list_key_val == dic:
             return list_key_val
-        list_key.append( list_key_val[0])
+        list_key.append(list_key_val[0])
         list_value.append(list_key_val[1])
     dictionary = dict(zip(list_key, list_value))
     return dictionary
