@@ -24,8 +24,8 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     '''
     face_values = get_facevalues(hand)
-    if face_values == [14,5,4,3,2]:
-        face_values = [5,4,3,2,1]
+    if face_values == [14, 5, 4, 3, 2]:
+        face_values = [5, 4, 3, 2, 1]
     set_face_values = set(face_values)
     return (len(set_face_values) == 5) and ((max(set_face_values) - min(set_face_values)) == 4)
 
