@@ -8,25 +8,25 @@ def create_social_network(data):
     '''
     redir = {}
     l_data = list(data.split('\n'))
-    print(l_data)
+    #print(l_data)
     s_data = ''.join(l_data)
-    print(s_data)
+    #print(s_data)
     l = s_data.split(' follows ')
-    print(l)
+    #print(l)
     key_ = []
     value_ = []
     for i in range(len(l)-1):
-        key_ = l[i][-1]
-        print(key_)
+        key_ = list(l[i][-1])
+        #print(key_)
         tmp_ = l[i+1]
         tmp_ = tmp_.split(",")
         s_tmp = ''.join(tmp_)
         tmp_1 = list(s_tmp)
-        print(s_tmp)
-        print(tmp_1)    
+        #print(s_tmp)
+        #print(tmp_1)    
         for j in range(len(tmp_1)):
-            value_ = tmp_1[j]
-            print(value_)
+            value_ = list(tmp_1[j])
+            #print(value_)
             redir = dict(zip(key_, value_))
     return redir
 
