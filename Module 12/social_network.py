@@ -24,13 +24,10 @@ def delete_person(network, arg1):
     '''
     delete
     '''
-    if arg1 in network:
-        del network[arg1]
-    for person in network:
-        if arg1 in network[person]:
-            network[person].remove(arg1)
+    if arg1 in network.keys():
+        tmp_ = list(network[arg1])
+        network[arg1].remove(tmp_)
     return network
-
 
 def main():
     '''

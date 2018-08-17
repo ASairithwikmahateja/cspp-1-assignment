@@ -6,7 +6,15 @@ def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    
+    word_freq = {}
+    dic = dict1.split(" ")
+    print(dic)
+    for word in dic:
+    	key_ =  word
+    	print(key_)
+    	value_ = list(dic).count(word)
+    	print(value_)
+    word_freq = dict(zip(key_, value_))
 
 def load_stopwords(filename):
     '''
