@@ -5,13 +5,14 @@
 '''
 
 def kind(face_values, num):
+    '''Kind function'''
     for face in face_values:
         if face_values.count(face) == num:
             return face
-    
 
 def get_facevalues(hand):
-    return sorted(['--23456789TJQKA'.index(face) for face, suite in hand], reverse = True)
+    '''Face values'''
+    return sorted(['--23456789TJQKA'.index(face) for face, suite in hand], reverse=True)
 
 def is_straight(hand):
     '''
