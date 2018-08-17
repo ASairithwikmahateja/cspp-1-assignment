@@ -1,39 +1,36 @@
 '''
     Document Distance - A detailed description is given in the PDF
 '''
-import math
 
+import math
+import re
+
+def word_list(string):
+    '''function to find the word list'''
+    regex = re.compile('[^a-z]')
+    return [regex.sub("", w.strip()) for w in string.lower().split(" ")]
+def remove_stopwords(word, dict_1, stop_word, index):
+    '''function to remove stopwords'''
+    for w_1 in word:
+        if w_1 not in stop_word and len(w_1) > 0:
+            if w_1 not in dict_1.keys():
+                dict_1[w_1] = [0, 0]
+            dict_1[w_1][index] += 1
+    return dict_1
 def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    dict1.lower()
-    dict2.lower()
-    dictionary = {}
-    word_freq = {}
-    list_1 = dict1.split(" ") + dict2.split(" ")
-    spl_char = "!@#$%^&*()-_+"
-    for i in list_1:
-        if i in spl_char:
-            list_1.remove(i)
-    for i in list_1:
-        dictionary[i] = list_1.count(i)
-    dict_3 = load_stopwords("stopwords.txt")
-    for i in dict_3:
-        if i in dictionary:
-            del dictionary[i]
-    for i in list_3:
-        word_freq[i] = [dict1.split(" ").count(i), dict2.split(" ").count(i)]
-    numer_n = 0
-    denom_n1 = 0
-    denom_n2 = 0
-    for i in word_freq:
-        numer_n = sum(word_freq[i][0]*word_freq[i][1])
-        denom_n1 = sum(word_freq[i][0]**2)
-        denom_n2 = sum(word_freq[i][1]**2)
-    denom_n = math.sqrt(denom_n1)*math.sqrt(denom_n2)
-    return numer_n/denom_n
-
+    word_1 = word_list(dict1)
+    word_2 = word_list(dict2)
+    stop_word = load_stopwords("stopwords.txt")
+    dict_1 = {}
+    word_freq = remove_stopwords(word_1, dict_1, stop_word, 0)
+    word_freq = remove_stopwords(word_2, dict_1, stop_word, 1)
+    numer_n = sum([v[0]*v[1] for v in word_freq.values()])
+    denom_1 = math.sqrt(sum([v[0]**2 for v in word_freq.values()]))
+    denom_2 = math.sqrt(sum([v[1]**2 for v in word_freq.values()]))
+    return numer_n/(denom_1*denom_2)
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
