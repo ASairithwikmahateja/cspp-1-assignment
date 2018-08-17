@@ -16,7 +16,7 @@ def unfollow(network, arg1, arg2):
     '''
     unfollow
     '''
-    if arg2 in network[arg1] :
+    if arg2 in network[arg1]:
         network[arg1].remove(arg2)
     return network
 
