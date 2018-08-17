@@ -8,9 +8,9 @@ def follow(network, arg1, arg2):
     '''
     follow
     '''
-    if arg2 not in network[arg1]:
+    if arg1 in network:
         network[arg1].append(arg2)
-    elif arg1 not in network:
+    else:
         l_ = []
         l_.append(arg2)
         network[arg1] = l_
