@@ -25,6 +25,7 @@ def delete_person(network, arg1):
     delete
     '''
     if arg1 in network.keys():
+        print("True")
         network.delete(arg1)
     return network
 
