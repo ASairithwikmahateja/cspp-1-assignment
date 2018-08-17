@@ -11,9 +11,9 @@ def follow(network, arg1, arg2):
     if arg1 in network:
         network[arg1].append(arg2)
     else:
-        l_ = []
-        l_.append(arg2)
-        network[arg1] = l_
+        l_s = []
+        l_s.append(arg2)
+        network[arg1] = l_s
     return network
 
 def unfollow(network, arg1, arg2):
