@@ -35,13 +35,12 @@ def load_stopwords(filename):
     return stopwords
 
 def remove_stopwords(words, stop_words, dict_n):
-	"""Removing stopwords"""
-	for word in words:
-		if word not in stop_words:
-			if word not in dict_n.keys():
-			    dict_n[word][1] = [0]
-			    dict_n[word][1] += 1
-	return dict_n
+    for word in words:
+        if word not in stop_words:
+            if word not in dict_n.keys():
+                dict_n[word][1] = [0]
+            dict_n[word][1] += 1
+    return dict_n
 
 def word_list(text):
     '''
