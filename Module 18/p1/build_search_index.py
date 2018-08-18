@@ -67,13 +67,11 @@ def build_search_index(docs):
     			word = line[ind]
     			dict_n[word][0] = ind
     return dict_n
-
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
     # clean up doc and tokenize to words list
     # add or update the words of the doc to the search index
     # return search index
-    return dict_n
 
 # helper function to print the search index
 # use this to verify how the search index looks
