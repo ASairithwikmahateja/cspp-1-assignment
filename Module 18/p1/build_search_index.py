@@ -22,6 +22,8 @@
 '''
 
 # helper function to load the stop words from a file
+import re
+
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
