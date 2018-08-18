@@ -38,11 +38,18 @@ def search(search_index, query):
         make a set of doc_id and return
     '''
     dictionary_keys = []
-    query = query.lower()
-    if query(int([search_index])) in dictionary_keys:
-        dictionary_keys = dictionary_keys.append(query(int([search_index])))
-        dictionary_keys = {}
-    return dictionary_keys
+    query = query.lower().split()
+    # if query(int([search_index])) in dictionary_keys:
+    #     dictionary_keys = dictionary_keys.append(query(int([search_index])))
+    #     dictionary_keys = {}
+    # return dictionary_keys
+    doc_id = set()
+    for word in query:
+        if word in search_index.keys():
+            for i in search_index[word]:
+                doc_id.add(i[0])
+    return doc_id
+
 
 def process_queries(search_index, queries):
     '''
