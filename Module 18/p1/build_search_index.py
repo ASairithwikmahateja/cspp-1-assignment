@@ -71,6 +71,7 @@ def build_search_index(docs):
             if line[ind] not in dict_n.keys():
                 word = line[ind]
                 dict_n[word][0] = ind
+    dict_n[1] = tuple(dict_n[1])
     return dict_n
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
