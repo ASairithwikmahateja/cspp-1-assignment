@@ -69,11 +69,11 @@ def build_search_index(docs):
     # hint: use enumerate to obtain the list index in the for loop
     word_lst = word_list(docs)
     stop_words = load_stopwords("stopwords.txt")
-    words_rep = remove_stopwords(word_lst, stop_words, dictn)
+    words_rep = remove_stopwords(word_lst, stop_words, dict_n)
         # clean up doc and tokenize to words list
         # add or update the words of the doc to the search index
     # return search index
-    return index
+    return dict_n
 
 # helper function to print the search index
 # use this to verify how the search index looks
