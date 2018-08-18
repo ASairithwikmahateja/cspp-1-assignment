@@ -37,7 +37,7 @@ def search(search_index, query):
         collect all the values for the words that are in the search_index
         make a set of doc_id and return
     '''
-    dictionary_keys = []
+    dictionary_keys = {}
     query = query.lower()
     if query in dictionary_keys.keys():
         dictionary_keys = dictionary_keys.append(query[search_index])
