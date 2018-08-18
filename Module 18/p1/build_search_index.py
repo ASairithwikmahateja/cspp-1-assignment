@@ -41,7 +41,7 @@ def remove_stopwords(words, stop_words, dict_n):
             if word not in dict_n.keys():
                 dict_n[word][1] = 0
             dict_n[word][1] += 1
-    dict_n[word] = tuple(dict_n[word])
+    dict_n[1] = tuple(dict_n[1])
     return dict_n
 
 def word_list(text):
