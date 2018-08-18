@@ -48,7 +48,7 @@ def word_list(text):
     '''
     regex = re.compile('[^a-z]')
     return [regex.sub("", w) for w in text.lower().split(" ")]
-    
+
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
