@@ -58,7 +58,7 @@ def build_search_index(docs):
     dict_n = {}
     # iterate through all the docs
     #docs = docs.splitlines()
-    for line in doc:
+    for line in docs:
     	for ind in range(len(line)):
     		if line[ind] not in dict_n.keys():
     			dict_n[word][0] = [ind]
