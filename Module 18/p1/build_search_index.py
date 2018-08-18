@@ -67,9 +67,9 @@ def build_search_index(docs):
     dict_n = remove_stopwords(word_lst, stop_words, dict_n)
     for line in docs:
     	for ind in range(len(line)):
-    		if line[ind] not in dict_n.keys():
-    			word = line[ind]
-    			dict_n[word][0] = ind
+            if line[ind] not in dict_n.keys():
+                word = line[ind]
+                dict_n[word][0] = ind
     return dict_n
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
