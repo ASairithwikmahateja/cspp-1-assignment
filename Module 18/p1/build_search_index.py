@@ -38,7 +38,7 @@ def remove_stopwords(words, stop_words, dict_n):
     for word in words:
         if word not in stop_words:
             if word not in dict_n.keys():
-                dict_n[word][1] = [0]
+                dict_n[word][1] = 0
             dict_n[word][1] += 1
     return dict_n
 
