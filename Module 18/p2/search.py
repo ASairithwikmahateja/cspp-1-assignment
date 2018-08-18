@@ -41,7 +41,7 @@ def search(search_index, query):
     query = query.lower()
     if query in dictionary.keys():
         dictionary = dictionary.append(query[search_index])
-        return dictionary
+    return dictionary
 
 def process_queries(search_index, queries):
     '''
