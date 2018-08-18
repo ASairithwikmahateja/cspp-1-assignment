@@ -62,7 +62,7 @@ def build_search_index(docs):
     	for ind in range(len(line)):
     		if line[ind] not in dict_n.keys():
     			word = line[ind]
-    			dict_n[word][0] = [ind]
+    			dict_n[word][0] = ind
     return dict_n
 
     # keep track of doc_id which is the list index corresponding the document
