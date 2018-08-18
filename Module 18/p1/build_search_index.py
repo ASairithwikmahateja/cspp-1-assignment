@@ -35,6 +35,7 @@ def load_stopwords(filename):
     return stopwords
 
 def remove_stopwords(words, stop_words, dict_n):
+    """removing stopwords"""
     for word in words:
         if word not in stop_words:
             if word not in dict_n.keys():
