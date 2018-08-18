@@ -54,9 +54,7 @@ def create_social_network(data):
         list_value.append(list_key_val[1])
     dictionary = dict(zip(list_key, list_value))
     return dictionary
-
-
-
+    
 
 def main():
     '''

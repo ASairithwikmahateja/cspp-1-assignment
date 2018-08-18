@@ -35,7 +35,6 @@ def delete_person(network, arg1):
             network[person].remove(arg1)
     return network
 
-
 def main():
     '''
         handling testcase input and printing output
