@@ -51,28 +51,27 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
+    lst = text.lower().split(" ")
+    print(lst)
     regex = re.compile('[^a-z]')
-    lst = str(text).lower()
-    return [regex.sub("", w) for w in lst.split(" ")]
+    return [regex.sub("", w) for w in lst]
 
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
     '''
-
     # initialize a search index (an empty dictionary)
     dict_n = {}
     # iterate through all the docs
-    #docs = docs.splitlines()
-    word_lst = word_list(docs)
-    stop_words = load_stopwords("stopwords.txt")
-    dict_n = remove_stopwords(word_lst, stop_words, dict_n)
     for line in docs:
         for ind in range(len(line)):
             if line[ind] not in dict_n.keys():
                 word = line[ind]
                 dict_n[word][0] = ind
     dict_n[1] = tuple(dict_n[1])
+    word_lst = word_list(docs)
+    stop_words = load_stopwords("stopwords.txt")
+    dict_n = remove_stopwords(word_lst, stop_words, dict_n)
     return dict_n
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
