@@ -6,6 +6,20 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
+    result = []
+    if len(m1[0]) == len(m2):
+    	for i in range(len(m1)):
+    		resTemp = []
+    		for j in range(len(m2[0])):
+    			res = 0
+    			for k in range(len(m2)):
+    				res += m1[i][k]*m2[k][j]
+    				resTemp.append(res)
+    			result.append(resTemp)
+    			return result
+    else:
+    	print("Error: Matrix shapes invalid for mult")
+    	return None
 
 def add_matrix(m1, m2):
     '''
@@ -25,9 +39,9 @@ def add_matrix(m1, m2):
     		print("Error: Matrix shapes invalid for addition")
     	return 
     	result = []
-    	for i,j in zip(m1,m2):
+    	for i, j in zip(m1, m2):
     		row = []
-    		for p,q in zip(i,j):
+    		for p, q in zip(i, j):
     			row.append(p+q)
     		result.append(row)
     return result
