@@ -23,8 +23,6 @@
 
 # helper function to load the stop words from a file
 
-import re
-
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
@@ -41,9 +39,22 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    lst = text.lower().split(" ")
-    regex = re.compile('[^a-z]')
-    return [regex.sub("", w) for w in lst]
+    words = []
+    str1 = ''
+    str2 = ""
+    text = [i.lower() for i in text]
+    for i in text:
+        k = i.split(" ")
+        str2 = ''
+        for j in k:
+            str1 = ''
+            for temp in j:
+                if temp.isalpha() == False:
+                    temp = ''
+                str1 = str1 + temp
+            str2 = str2 + str1 + " "
+        words.append(str2)
+    return words
 
 def build_search_index(docs):
     '''
