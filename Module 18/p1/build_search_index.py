@@ -55,7 +55,7 @@ def build_search_index(docs):
     stop_words = load_stopwords("stopwords.txt")
     # iterate through all the docs
     text = [i.split() for i in word_lst]
-    new_text = [j for i in text for j in i if j not in stopwords]
+    new_text = [j for i in text for j in i if j not in stop_words]
     for line in new_text:
         lst = []
         for doc_id, doc_ele in enumerate(text):
