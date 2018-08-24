@@ -8,14 +8,12 @@ def tic_tac_toe(mat):
 		for k in range(3):
 			l = [i for i in mat[j][k]]
 			lst.append(l)
-	for itera in range(len(lst)-6):
-		if lst[itera] == 'x' or lst[itera] == 'o':
-				if lst[itera] == lst[itera+3] and lst[itera+3] == lst[itera+6]:
-					if lst[itera] == '.':
-						return None
-		else:
-			print('invalid input')
-		print(lst[itera])
+	for i in lst:
+		if i != 'x' or i != 'o':
+			print("invalid input")
+		for itera in range(len(lst)-6):
+			if lst[itera] == lst[itera+3] and lst[itera+3] == lst[itera+6]:
+				print(lst[itera])
 		'''elif lst[itera] == lst[itera+4] and lst[itera+4] == lst[itera+7]:
 			print(lst[itera])
 		elif lst[itera+2] == lst[itera+4] and lst[itera+4] == lst[itera+6]:
