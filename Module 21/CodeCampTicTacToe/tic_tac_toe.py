@@ -27,13 +27,13 @@ def tic_tac_toe(mat):
 def read_matrix():
 	 matrix = []
 	 for i in range(3):
-	 	l =[i for i in input().split(" ")]
+	 	l = [i for i in input().split(" ")]
 	 	matrix.append(l)
 	 return matrix
 
 def main():
 	mat = read_matrix()
-	return tic_tac_toe(mat)
+	tic_tac_toe(mat)
 
 if __name__ == "__main__":
 	main()
