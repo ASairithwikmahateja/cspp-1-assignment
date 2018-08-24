@@ -14,6 +14,7 @@ def tic_tac_toe(mat):
 			if lst[itera] == lst[itera+3] and lst[itera+3] == lst[itera+6]:
 				print(''.join(lst[itera]))
 	else:
+		print('False')
 		print('invalid game')
 	'''elif lst[itera] == lst[itera+4] and lst[itera+4] == lst[itera+7]:
 		print(lst[itera])
