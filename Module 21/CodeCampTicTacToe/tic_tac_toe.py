@@ -8,7 +8,7 @@ def tic_tac_toe(mat):
 		for k in range(3):
 			l = [i for i in mat[j][k]]
 			lst.append(l)
-	if lst.count('x') <= 5 and lst.count('o') <= 5:
+	if lst.count('x') < 6 and lst.count('o') < 6:
 		for itera in range(len(lst)-6):
 			if lst[itera] == lst[itera+3] and lst[itera+3] == lst[itera+6]:
 				print(''.join(lst[itera]))
