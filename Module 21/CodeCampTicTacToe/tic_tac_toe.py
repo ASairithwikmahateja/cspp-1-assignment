@@ -12,11 +12,11 @@ def tic_tac_toe(mat):
 		for itera in range(len(lst)-6):
 			if lst[itera] == lst[itera+3] and lst[itera+3] == lst[itera+6]:
 				print(''.join(lst[itera]))
+			elif lst[itera] == lst[itera+4] and lst[itera+4] == lst[itera+8]:
+				print(lst[itera])
 	elif lst.count('x') >= 6 or lst.count('o') >= 6:
 		print('invalid game')
-	'''elif lst[itera] == lst[itera+4] and lst[itera+4] == lst[itera+7]:
-		print(lst[itera])
-	elif lst[itera+2] == lst[itera+4] and lst[itera+4] == lst[itera+6]:
+	'''elif lst[itera+2] == lst[itera+4] and lst[itera+4] == lst[itera+6]:
 		print(lst[itera])'''
 	'''if ''.join(lst[itera]) not in 'x' or 'o':
 		print('invalid input')
