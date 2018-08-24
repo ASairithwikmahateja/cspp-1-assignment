@@ -9,20 +9,21 @@ def tic_tac_toe(mat):
 			l = [i for i in mat[j][k]]
 			lst.append(l)
 	if lst.count('x') < 6 and lst.count('o') < 6:
+		print('True')
 		for itera in range(len(lst)-6):
 			if lst[itera] == lst[itera+3] and lst[itera+3] == lst[itera+6]:
 				print(''.join(lst[itera]))
 	else:
 		print('invalid game')
+		'''elif lst[itera] == lst[itera+4] and lst[itera+4] == lst[itera+7]:
+			print(lst[itera])
+		elif lst[itera+2] == lst[itera+4] and lst[itera+4] == lst[itera+6]:
+			print(lst[itera])'''
 		'''if ''.join(lst[itera]) not in 'x' or 'o':
 				print('invalid input')
 				'''
 		#if i != 'x' or i != 'o' for i in lst:
 		#print("invalid input")
-		'''elif lst[itera] == lst[itera+4] and lst[itera+4] == lst[itera+7]:
-			print(lst[itera])
-		elif lst[itera+2] == lst[itera+4] and lst[itera+4] == lst[itera+6]:
-			print(lst[itera])'''
 
 def read_matrix():
 	 matrix = []
