@@ -8,24 +8,21 @@ def tic_tac_toe(mat):
 		for k in range(3):
 			l = [i for i in mat[j][k]]
 			lst.append(l)
-	if lst.count('x') < 5 or lst.count('o') < 5:
-		for itera in range(len(lst)-6):
-			if lst[itera] == lst[itera+3] and lst[itera+3] == lst[itera+6]:
-				if ''.join(lst[itera]) in ('x','o'):
-					print(''.join(lst[itera]))
-				else:
-					print('invalid input')
-			'''elif lst[itera] == lst[itera+4]:
-				print(lst[itera])'''
-	elif lst.count('x') >= 6 or lst.count('o') >= 6:
+	#if lst.count('x') < 5 or lst.count('o') < 5:
+	for itera in range(len(lst)-6):
+		if lst[itera] == lst[itera+3] and lst[itera+3] == lst[itera+6]:
+			if ''.join(lst[itera]) in ('x','o'):
+				print(''.join(lst[itera]))
+			else:
+				print('invalid input')
+	if lst.count('x') >= 6 or lst.count('o') >= 6:
 		print('invalid game')
 	'''elif lst[itera+2] == lst[itera+4] and lst[itera+4] == lst[itera+6]:
 		print(lst[itera])'''
 	'''if ''.join(lst[itera]) not in 'x' or 'o':
-		print('invalid input')
-		'''
-		#if i != 'x' or i != 'o' for i in lst:
-		#print("invalid input")
+		print('invalid input')'''
+	'''elif lst[itera] == lst[itera+4]:
+		print(lst[itera])'''
 
 def read_matrix():
 	 matrix = []
