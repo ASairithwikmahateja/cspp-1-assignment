@@ -13,8 +13,8 @@ def tic_tac_toe(mat):
 			if ''.join(lst[itera]) in ('x','o'):
 				print(''.join(lst[itera]))
 			else:
-				'''print('invalid input')
-				else:
+				print('invalid input')
+				'''else:
 					print('invalid game')'''
 	'''elif lst[itera+2] == lst[itera+4] and lst[itera+4] == lst[itera+6]:
 		print(lst[itera])'''
