@@ -23,7 +23,6 @@ def read_matrix():
 	 for i in range(3):
 	 	l =[i for i in input().split(" ")]
 	 	matrix.append(l)
-	 print(matrix)
 	 return matrix
 
 def main():
