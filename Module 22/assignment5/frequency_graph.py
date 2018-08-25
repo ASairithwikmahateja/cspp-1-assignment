@@ -7,8 +7,9 @@ def freq(temp):
     temp function
     '''
     lst = []
-    for i in range(temp):
+    while temp > 0:
         lst.append("#")
+        temp -= 1
     return ''.join(lst)
 
 def frequency_graph(dictionary):
