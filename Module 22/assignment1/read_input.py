@@ -8,6 +8,7 @@ def main():
     for i in range(n):
     	line = input()
     	lst.append(line)
+    	lst.split(",")
     print(lst)
 
 if __name__ == '__main__':
