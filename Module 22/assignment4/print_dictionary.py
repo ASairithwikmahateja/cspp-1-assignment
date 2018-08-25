@@ -13,7 +13,7 @@ def print_dictionary(dictionary):
 	lst.sort()
 	print(lst)
 	for i in lst:
-		print(i," - ", )
+		print(i," - ",count(i))
 
 def main():
     dictionary = eval(input())
