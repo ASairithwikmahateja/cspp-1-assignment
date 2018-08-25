@@ -10,8 +10,10 @@ def print_dictionary(dictionary):
 	for i in dictionary.keys():
 		lst.append(i)
 	print(lst)
-	lst.sort()
+	sorted(lst)
 	print(lst)
+	for i in lst:
+		print(i," - ", )
 
 def main():
     dictionary = eval(input())
