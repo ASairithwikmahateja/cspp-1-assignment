@@ -15,19 +15,6 @@ def tokenize(line):
     		dictfreq[i] += 1
     print(dict(zip(dictfreq.keys(),dictfreq.values())))
 
-def clean_string(string):
-    '''
-    String Cleaning method
-    '''
-    spc = "!@#$%^&*() .,"
-    str_new = ""
-    for i in string:
-        if i in spc:
-            str_new += ""
-        else:
-            str_new += i
-    return str_new
-
 def main():
     '''
     Main Function
@@ -36,11 +23,6 @@ def main():
     lst = []
     for i in range(n_l):
         line = input().split(" ")
-        print(line)
-        lst.append(line)
-        line = clean_string(lst)
-    print(lst)
-    tokenize(line)
 
 if __name__ == '__main__':
     main()
