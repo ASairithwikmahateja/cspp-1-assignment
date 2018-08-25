@@ -23,7 +23,7 @@ def row_check(sudoku):
     Checking row condition
     '''
     for row in sudoku:
-        if set(row).count() == 9 and sum(row) == 45:
+        if sudoku.count(set(row)) == 9 and sum(row) == 45:
             return True
         return False
 
