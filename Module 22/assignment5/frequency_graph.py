@@ -2,6 +2,14 @@
 Write a function to print a dictionary with the keys in sorted order along with the
 frequency of each word. Display the frequency values using “#” as a text based graph
 '''
+def freq(temp):
+    '''
+    temp function
+    '''
+    lst = []
+    for i in range(temp):
+        lst.append("#")
+    return lst
 
 def frequency_graph(dictionary):
     '''
@@ -12,8 +20,8 @@ def frequency_graph(dictionary):
         lst.append(i)
     lst.sort()
     for i in lst:
-    	for j in range(dictionary[i]):
-    	    print(i, "-", "#")
+    	temp = dictionary[i]
+    	print(i, "-", freq(temp))  	    
 
 def main():
     '''
