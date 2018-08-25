@@ -4,7 +4,7 @@ alphabets in both upper and lower case and numbers.
 '''
 
 def clean_string(string):
-    spc = "!@#$%^&*() "
+    spc = "!@#$%^&*() .,"
     str_new = ""
     for i in string:
     	if i in spc:
