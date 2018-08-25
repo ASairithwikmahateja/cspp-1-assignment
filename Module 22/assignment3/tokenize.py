@@ -35,6 +35,7 @@ def main():
     n_l = int(input())
     for i in range(n_l):
         line = input().split(" ")
+        print(line)
         line = clean_string(line)
     print(line)
     tokenize(line)
