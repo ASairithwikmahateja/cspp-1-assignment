@@ -5,22 +5,21 @@ each word
 
 def tokenize(line):
     '''
-    Tokenize Function 
+    Tokenize Function
     '''
     dictfreq = {}
     for i in line:
-    	if i not in dictfreq.keys():
-    		dictfreq[i] = 1
-    	else:
-    		dictfreq[i] += 1
-    print(dict(zip(dictfreq.keys(),dictfreq.values())))
+        if i not in dictfreq.keys():
+        	dictfreq[i] = 1
+        else:
+            dictfreq[i] += 1
+    print(dict(zip(dictfreq.keys(), dictfreq.values())))
 
 def main():
     '''
     Main Function
     '''
     n_l = int(input())
-    lst = []
     while n_l > 0:
         line = input().split(" ")
         n_l -= 1
