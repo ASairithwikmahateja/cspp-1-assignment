@@ -15,7 +15,8 @@ def check_sudoku(sudoku):
     '''
     if row_check(sudoku):
         if column_check(sudoku):
-            return True
+            if sub_sudoku(sudoku):
+                return True
     return False
 
 def row_check(sudoku):
@@ -44,6 +45,16 @@ def sub_sudoku(sudoku):
     '''
     Checking for sub matrix of sudoku
     '''
+    mat = []
+    for row in sudoku:
+        lst = row[0:3:1]
+        mat.append(lst)
+    for colu in sudoku:
+        lst = colu[0:3:1]
+        mat.append(lst)
+    if sudoku.set(mat) == 9:
+        return True
+    return False 
 
 
 def main():
