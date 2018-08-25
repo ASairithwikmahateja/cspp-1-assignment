@@ -21,8 +21,9 @@ def main():
     '''
     n_l = int(input())
     lst = []
-    for i in range(n_l):
+    while n_l > 0:
         line = input().split(" ")
+        n_l -= 1
     tokenize(line)
 
 if __name__ == '__main__':
