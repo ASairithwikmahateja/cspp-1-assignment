@@ -28,6 +28,9 @@ def row_check(sudoku):
         return False
 
 def column_check(sudoku):
+    '''
+    Checking column condition
+    '''
     trans_pose = []
     for i in range(len(sudoku)):
         for row in sudoku:
