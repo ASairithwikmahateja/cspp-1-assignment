@@ -10,7 +10,6 @@ def print_dictionary(dictionary):
 	for i in dictionary.keys():
 		lst.append(i)
 	lst.sort()
-	print(lst)
 	for i in lst:
 		print(i,"-",dictionary[i])
 
