@@ -9,7 +9,8 @@ def print_dictionary(dictionary):
 	for i in dictionary.keys():
 		lst.append(i)
 	print(lst)
-	lst.sorted(lst)
+	lst1.sort(lst)
+	print(lst1)
 
 def main():
     dictionary = eval(input())
