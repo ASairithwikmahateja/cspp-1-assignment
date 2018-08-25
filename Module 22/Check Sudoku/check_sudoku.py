@@ -56,7 +56,6 @@ def sub_sudoku(sudoku):
         return True
     return False 
 
-
 def main():
     '''
         main function to read input sudoku from console
