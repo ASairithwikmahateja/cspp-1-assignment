@@ -23,7 +23,8 @@ def row_check(sudoku):
     Checking row condition
     '''
     for row in sudoku:
-        if sudoku.count(set(row)) == 9 and sum(row) == 45:
+        if sudoku.count(set(row)) == 9: 
+        #and sum(row) == 45:
             return True
         return False
 
@@ -38,6 +39,12 @@ def column_check(sudoku):
                 row.append(colu)
             trans_pose.append(row)
     return row_check(trans_pose)
+
+def sub_sudoku(sudoku):
+    '''
+    Checking for sub matrix of sudoku
+    '''
+
 
 def main():
     '''
