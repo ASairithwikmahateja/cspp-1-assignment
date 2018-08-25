@@ -9,9 +9,7 @@ def print_dictionary(dictionary):
 	lst1 = []
 	for i in dictionary.keys():
 		lst.append(i)
-	print(lst)
 	lst.sort()
-	print(lst)
 	for i in lst:
 		print(i," - ",lst.count(i))
 
