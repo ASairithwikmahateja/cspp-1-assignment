@@ -9,7 +9,6 @@ def print_dictionary(dictionary):
     Dictionary Function
     '''
     lst = []
-    lst1 = []
     for i in dictionary.keys():
         lst.append(i)
     lst.sort()
