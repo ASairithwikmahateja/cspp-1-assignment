@@ -13,7 +13,28 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    pass
+    if row_check(sudoku):
+        if column_check(sudoku):
+            return True
+    return False
+
+def row_check(sudoku):
+    '''
+    Checking row condition
+    '''
+    for row in sudoku:
+        if count.set(row) == 9 and sum(row) == 45:
+            return True
+        return False
+
+def column_check(sudoku):
+    trans_pose = []
+    for i in range(len(sudoku)):
+        for row in sudoku:
+            for colu in row[i]:
+                row.append(colu)
+            trans_pose.append(row)
+    return row_check(trans_pose)
 
 def main():
     '''
