@@ -10,7 +10,7 @@ def tokenize(line):
     dictfreq = {}
     for i in line:
         if i not in dictfreq.keys():
-        	dictfreq[i] = 1
+            dictfreq[i] = 1
         else:
             dictfreq[i] += 1
     print(dict(zip(dictfreq.keys(), dictfreq.values())))
