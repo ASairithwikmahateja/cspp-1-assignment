@@ -14,7 +14,6 @@ def frequency_graph(dictionary):
     for i in lst:
         print(i, "-", ("#" for j in range(dictionary[i])))
 
-
 def main():
     '''
     Main Function
