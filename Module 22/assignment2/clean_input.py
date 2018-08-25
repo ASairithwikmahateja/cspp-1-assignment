@@ -13,10 +13,13 @@ def clean_string(string):
         if i in spc:
             str_new += ""
         else:
-        	str_new += i
+            str_new += i
     return str_new
 
 def main():
+    '''
+    Main Function
+    '''
     string = input()
     print(clean_string(string))
 
