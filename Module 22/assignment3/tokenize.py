@@ -23,8 +23,7 @@ def main():
     lst = []
     for i in range(n_l):
         line = input().split(" ")
-        lst.append(line)
-    tokenize(lst)
+    tokenize(line)
 
 if __name__ == '__main__':
     main()
