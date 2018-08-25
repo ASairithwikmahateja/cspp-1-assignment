@@ -21,8 +21,8 @@ def frequency_graph(dictionary):
         lst.append(i)
     lst.sort()
     for i in lst:
-    	temp = dictionary[i]
-    	print(i, "-", freq(temp))  	    
+        temp = dictionary[i]
+        print(i, "-", freq(temp))
 
 def main():
     '''
