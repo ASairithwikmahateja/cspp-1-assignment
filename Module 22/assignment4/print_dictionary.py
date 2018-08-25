@@ -12,7 +12,7 @@ def print_dictionary(dictionary):
 	lst.sort()
 	print(lst)
 	for i in lst:
-		print(i,"-",lst.count(i))
+		print(i,"-",dictionary[i])
 
 def main():
     dictionary = eval(input())
