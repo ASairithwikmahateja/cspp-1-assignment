@@ -10,7 +10,7 @@ def checkGame(matrix):
 				count_x+=1
 	if abs(count_x-count_o)==1 or abs(count_x-count_o)==0:
 		return True
-	return False	
+	return False
 
 def checkInput(matrix):
 	for i in matrix:
@@ -51,7 +51,7 @@ def diagonals(matrix):
 		d1.append(matrix[i][i])
 	if d1.count("o")==3:
 		return (True,"o")
-	if  d1.count("x")==3:
+	if d1.count("x")==3:
 		return (True,"x")
 	d2 =[]
 	j=len(matrix[0])-1
@@ -60,7 +60,7 @@ def diagonals(matrix):
 		j=j-1
 	if d2.count("o")==3:
 		return (True,"o")
-	if  d2.count("x")==3:
+	if d2.count("x")==3:
 		return (True,"x")
 	return (False,0)
 
