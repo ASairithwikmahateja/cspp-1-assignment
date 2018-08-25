@@ -54,8 +54,8 @@ def sub_sudoku(sudoku):
         mat.append(lst)
     if sudoku.set(mat) == 9:
         return True
-    return False 
-
+    return False
+    
 def main():
     '''
         main function to read input sudoku from console
