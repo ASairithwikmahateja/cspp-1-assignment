@@ -33,11 +33,13 @@ def main():
     Main Function
     '''
     n_l = int(input())
+    lst = []
     for i in range(n_l):
         line = input().split(" ")
         print(line)
-        line = clean_string(line)
-    print(line)
+        lst.append(line)
+        line = clean_string(lst)
+    print(lst)
     tokenize(line)
 
 if __name__ == '__main__':
